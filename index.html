@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bike Mileage Tracker</title>
+
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#f2f2f7" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Bike Mileage</h1>
+  </header>
+
+  <section class="card form-card">
+    <form id="fuelForm">
+      <input type="number" step="0.01" id="litres" placeholder="Fuel (Litres)" required />
+      <input type="number" step="0.01" id="amount" placeholder="Amount Paid (₹)" required />
+      <input type="number" step="1" id="odometer" placeholder="Odometer (km)" required />
+      <button type="submit" class="primary-btn">Add Entry</button>
+    </form>
+    <p id="error" class="error"></p>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span>Last Cycle</span>
+      <h2 id="lastMileage">--</h2>
+    </div>
+    <div class="stat-card">
+      <span>Average</span>
+      <h2 id="avgMileage">--</h2>
+    </div>
+    <div class="stat-card">
+      <span>This Month</span>
+      <h2 id="monthlySpend">--</h2>
+    </div>
+  </section>
+
+  <section class="card logs-card">
+    <h3>Fuel Logs</h3>
+    <ul id="logList"></ul>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
