@@ -2,6 +2,15 @@ const form = document.getElementById("fuelForm");
 const errorEl = document.getElementById("error");
 const logList = document.getElementById("logList");
 
+
+const litresInput = document.getElementById("litres");
+const amountInput = document.getElementById("amount");
+const odometerInput = document.getElementById("odometer");
+
+const lastMileage = document.getElementById("lastMileage");
+const avgMileage = document.getElementById("avgMileage");
+const monthlySpend = document.getElementById("monthlySpend");
+
 let logs = JSON.parse(localStorage.getItem("fuelLogs")) || [];
 
 function saveLogs() {
